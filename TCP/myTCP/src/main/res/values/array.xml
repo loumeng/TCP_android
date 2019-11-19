@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DeviceID">
+        <item>终端1</item>
+        <item>终端2</item>
+        <item>终端3</item>
+        <item>终端4</item>
+0    </string-array>
+    <string-array name="mode">
+        <item>TCP服务器</item>
+        <item>TCP客户端</item>
+        <item>UDP</item>
+    </string-array>
+
+</resources>

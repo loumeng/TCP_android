@@ -1,0 +1,7 @@
+#Mon Apr 10 15:32:47 CST 2017
+base.0=E\:\\android studio\\TCP\\myTCP\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_10d97cc71803299509afccfc5418384da6fdd5ea
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=E\:\\android studio\\TCP\\myTCP\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_003d8c4fc538234e4c1a4654d1c92b8d7f7746f4\\classes.dex
+base.1=E\:\\android studio\\TCP\\myTCP\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_003d8c4fc538234e4c1a4654d1c92b8d7f7746f4
+file.0=E\:\\android studio\\TCP\\myTCP\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_10d97cc71803299509afccfc5418384da6fdd5ea\\classes.dex

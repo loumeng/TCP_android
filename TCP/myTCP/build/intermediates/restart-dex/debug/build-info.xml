@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="22"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="3381996673216"
+    token="-6203712690252464223"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="344" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="369" />
+    <task
+        name="verifier"
+        duration="93" />
+
+    <artifact
+        location="E:\android studio\TCP\myTCP\build\outputs\apk\myTCP-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="3381996673216"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="E:\android studio\TCP\myTCP\build\outputs\apk\myTCP-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
