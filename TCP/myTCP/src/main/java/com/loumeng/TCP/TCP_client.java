@@ -120,17 +120,26 @@ public class TCP_client extends Thread{
             }
         }
     }
-   public void sendmessage(byte[] message){
-       try {
-           outputStream =socket.getOutputStream();
-           mhandler.sendMessage(mhandler.
-                   obtainMessage(CLIENT_STATE_CORRECT_WRITE,-1,-1,message));
-           outputStream.write(message);
 
-       } catch (IOException e) {
-               senderror();
-       }
-   }
+  public void sendmessage(byte[] message){
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    outputStream =socket.getOutputStream();
+                    mhandler.sendMessage(mhandler.
+                            obtainMessage(CLIENT_STATE_CORRECT_WRITE,-1,-1,message));
+                    outputStream.write(message);
+
+                } catch (IOException e) {
+                    senderror();
+                }
+            }
+        }.start();
+       
+    }
+
 
     void senderror(){
         mhandler.sendMessage(mhandler.obtainMessage(CLIENT_STATE_ERROR));

@@ -128,19 +128,26 @@ public class TCP_service extends Thread{
             e.printStackTrace();
          }
     }
-    //数据写入函数
+     //数据写入函数
     public void write(byte[] buffer){
-        try {
-            if (Ser_outputStream!=null){
-            Ser_outputStream.write(buffer);
-            Message er_message = mhandler.
-                    obtainMessage(SERVER_STATE_CORRECT_WRITE,-1,-1,buffer);
-            mhandler.sendMessage(er_message);
-            }else{ send_Error();}
-        } catch (IOException e) {
-            e.printStackTrace();
-            send_Error();
-        }
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    if (Ser_outputStream!=null){
+                        Ser_outputStream.write(buffer);
+                        Message er_message = mhandler.
+                                obtainMessage(SERVER_STATE_CORRECT_WRITE,-1,-1,buffer);
+                        mhandler.sendMessage(er_message);
+                    }else{ send_Error();}
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    send_Error();
+                }
+            }
+        }.start();
+
     }
     public  void send_Error(){
         Message er_message = mhandler.obtainMessage(SERVER_STATE_ERROR);
