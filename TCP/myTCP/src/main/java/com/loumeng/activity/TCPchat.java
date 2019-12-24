@@ -443,13 +443,20 @@ public class TCPchat extends Activity {
         tcp_client.sendmessage(send);
        }
    }else{
-       byte[] send = message.getBytes();
+       byte[] send =null;
+       try {
+            send = message.getBytes("GBK");
+       } catch (UnsupportedEncodingException e) {
+           e.printStackTrace();
+       }
+       if (send==null)
+           return;
        if(ch_mode==MODE_TCP_SERVER)
        { tcp_service.write(send);
        }else if (ch_mode==MODE_TCP_CLIENT){
            tcp_client.sendmessage(send);
        }
-   }
+    }
     }
     //页面退出函数
     public void exit(){
